@@ -1,0 +1,20 @@
+
+
+def split_and_join(line):
+    splitarr = []
+    splitarr = line.split(" ")
+    for n in range (0, len(splitarr)):
+        print(splitarr[n], end = "")
+        if n < len(splitarr)-1:
+            print("-", end = "")
+    return ""
+    
+def split_and_join_(line):
+    splitarr = []
+    splitarr = line.split(" ")
+    splitarr = "-".join(splitarr)
+    return splitarr
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
