@@ -1,2 +1,14 @@
 if __name__ == '__main__':
     N = int(input())
+lst = []
+for i in range(N):
+    command = input().split()
+    if command[0] == "print":
+        print(lst)
+    elif len(command) == 1:
+        getattr(lst, command[0])()
+    elif len(command) == 2:
+        getattr(lst, command[0])(int(command[1]))
+    else:
+        getattr(lst, command[0])(int(command[1]), int(command[2]))
+    
